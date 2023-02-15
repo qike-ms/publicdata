@@ -1,0 +1,401 @@
+Age,Commit message (Expand),Author,Files,Lines
+2/7/2023,net: mana: Fix accessing freed irq affinity_hint,Haiyang Zhang,1,-26/+11
+2/7/2023,hv_netvsc: Allocate memory in netvsc_dma_map() with GFP_ATOMIC,Michael Kelley,1,-1/+1
+2/1/2023,hv_netvsc: Fix missed pagebuf entries in netvsc_dma_map/unmap(),Michael Kelley,1,-7/+2
+2023-01-20,net: mana: Fix IRQ name - add PCI and queue number,Haiyang Zhang,2,-1/+11
+2023-01-04,cifs: fix interface count calculation during refresh,Shyam Prasad N,1,-1/+2
+2023-01-04,cifs: refcount only the selected iface during interface update,Shyam Prasad N,1,-1/+2
+2022-12-19,cifs: update internal module number,Steve French,1,-2/+2
+2022-12-14,scsi: storvsc: Fix swiotlb bounce buffer leak in confidential VM,Michael Kelley,1,-0/+3
+2022-12-12,cifs: print warning when conflicting soft vs. hard mount options specified,Steve French,1,-3/+8
+2022-12-12,cifs: fix missing display of three mount options,Steve French,1,-1/+7
+2022-12-12,cifs: fix various whitespace errors in headers,Steve French,2,-30/+22
+2022-12-12,cifs: minor cleanup of some headers,Steve French,3,-5/+8
+2022-12-09,mm/gup: fix gup_pud_range() for dax,John Starks,1,-1/+1
+2022-12-08,tpm/tpm_crb: Fix error message in __crb_relinquish_locality(),Michael Kelley,1,-1/+1
+2022-12-06,net: mana: Fix race on per-CQ variable napi work_done,Haiyang Zhang,2,-6/+19
+2022-11-29,x86/hyperv: Remove unregister syscore call from Hyper-V cleanup,Gaurav Kohli,1,-2/+0
+2022-11-28,tracing/user_events: Fix call print_fmt leak,Beau Belgrave,1,-0/+1
+2022-11-28,iommu/hyper-v: Allow hyperv irq remapping without x2apic,Nuno Das Neves,3,-6/+17
+2022-11-28,x86/hyperv: Expand definition of struct hv_vp_assist_page,Saurabh Sengar,1,-1/+10
+2022-11-28,hv_balloon: Add support for configurable order free page reporting,Shradha Gupta,1,-21/+73
+2022-11-28,mm/page_reporting: Add checks for page_reporting_order param,Shradha Gupta,1,-5/+45
+2022-11-22,x86/ioremap: Fix page aligned size calculation in __ioremap_caller(),Michael Kelley,1,-1/+7
+2022-11-12,PCI: hv: Only reuse existing IRTE allocation for Multi-MSI,Dexuan Cui,1,-15/+75
+2022-11-11,scsi: storvsc: Fix handling of srb_status and capacity change events,Michael Kelley,1,-35/+34
+2022-11-11,selftests: bpf: Add a test when bpf_probe_read_kernel_str() returns EFAULT,Alban Crequy,2,-0/+12
+2022-11-11,maccess: Fix writing offset in case of fault in strncpy_from_kernel_nofault(),Alban Crequy,1,-1/+1
+2022-11-11,RDMA/mana_ib: Add a driver for Microsoft Azure Network Adapter,Long Li,15,-0/+1793
+2022-11-10,net: mana: Define data structures for protection domain and memory registration,Ajay Sharma,3,-23/+143
+2022-11-10,net: mana: Define data structures for allocating doorbell page from GDMA,Long Li,1,-0/+24
+2022-11-10,net: mana: Define and process GDMA response code GDMA_STATUS_MORE_ENTRIES,Ajay Sharma,2,-1/+3
+2022-11-10,net: mana: Define max values for SGL entries,Long Li,3,-4/+9
+2022-11-10,net: mana: Move header files to a common location,Long Li,12,-8/+9
+2022-11-10,net: mana: Record port number in netdev,Long Li,1,-0/+1
+2022-11-10,net: mana: Export Work Queue functions for use by RDMA driver,Long Li,3,-7/+19
+2022-11-10,net: mana: Set the DMA device max segment size,Ajay Sharma,1,-0/+6
+2022-11-10,net: mana: Handle vport sharing between devices,Long Li,2,-2/+58
+2022-11-10,net: mana: Record the physical address for doorbell page region,Long Li,2,-0/+6
+2022-11-10,net: mana: Add support for auxiliary device,Long Li,4,-1/+95
+2022-11-04,cifs: avoid unnecessary iteration of tcp sessions,Shyam Prasad N,3,-51/+55
+2022-11-04,cifs: always iterate smb sessions using primary channel,Shyam Prasad N,4,-5/+25
+2022-11-03,PCI: hv: Fix the definition of vector in hv_compose_msi_msg(),Dexuan Cui,1,-6/+16
+2022-11-03,x86/hyperv: fix invalid writes to MSRs during root partition kexec,Anirudh Rayabharam,1,-4/+7
+2022-11-03,clocksource/drivers/hyperv: add data structure for reference TSC MSR,Anirudh Rayabharam,2,-14/+24
+2022-11-03,net: mana: Assign interrupts to CPUs based on NUMA nodes,Saurabh Sengar,2,-3/+28
+2022-11-03,vsock: fix possible infinite sleep in vsock_connectible_wait_data(),Dexuan Cui,1,-1/+4
+2022-11-03,vsock: remove the unused 'wait' in vsock_connectible_recvmsg(),Dexuan Cui,1,-2/+0
+2022-10-19,cifs: update internal module number,Steve French,1,-2/+2
+2022-10-19,smb3: interface count displayed incorrectly,Steve French,1,-1/+2
+2022-10-15,smb3: improve SMB3 change notification support,Steve French,6,-13/+90
+2022-10-15,cifs: lease key is uninitialized in two additional functions when smb1,Steve French,1,-2/+2
+2022-10-15,cifs: lease key is uninitialized in smb1 paths,Steve French,1,-1/+1
+2022-10-15,smb3: must initialize two ACL struct fields to zero,Steve French,1,-1/+2
+2022-10-13,smb3: clarify multichannel warning,Steve French,1,-1/+2
+2022-10-07,smb3: fix oops in calculating shash_setkey,Steve French,1,-2/+2
+2022-10-07,hv_netvsc: Fix race between VF offering and VF association message from host,Gaurav Kohli,3,-1/+25
+2022-10-05,smb3: do not log confusing message when server returns no network interfaces,Steve French,3,-7/+20
+2022-10-05,smb3: define missing create contexts,Steve French,1,-1/+5
+2022-10-05,smb3: add dynamic trace points for tree disconnect,Steve French,15,-38/+46
+2022-10-03,tracing/user_events: Move pages/locks into groups to prepare for namespaces,Beau Belgrave,1,-72/+274
+2022-09-30,"bpf, docs: Add TOC and fix formatting.",Dave Thaler,1,-132/+136
+2022-09-30,"bpf, docs: Add Clang note about BPF_ALU",Dave Thaler,1,-0/+6
+2022-09-30,"bpf, docs: Move Clang notes to a separate file",Dave Thaler,2,-6/+24
+2022-09-30,"bpf, docs: Linux byteswap note",Dave Thaler,2,-4/+5
+2022-09-30,"bpf, docs: Move legacy packet instructions to a separate file",Dave Thaler,2,-35/+68
+2022-09-29,libnvdimm/region: Allow setting align attribute on regions without mappings,Tyler Hicks,1,-5/+3
+2022-09-29,drm/hyperv: Add ratelimit on error message,Saurabh Sengar,1,-1/+1
+2022-09-29,tracing/user_events: Update ABI documentation to align to bits vs bytes,Beau Belgrave,1,-28/+58
+2022-09-29,tracing/user_events: Use bits vs bytes for enabled status page data,Beau Belgrave,5,-38/+135
+2022-09-29,tracing/user_events: Use refcount instead of atomic for ref tracking,Beau Belgrave,1,-29/+24
+2022-09-29,tracing/user_events: Ensure user provided strings are safely formatted,Beau Belgrave,1,-32/+59
+2022-09-29,tracing/user_events: Use WRITE instead of READ for io vector import,Beau Belgrave,1,-1/+2
+2022-09-29,tracing/user_events: Use NULL for strstr checks,Beau Belgrave,1,-3/+3
+2022-09-27,nvme: Fix IOC_PR_CLEAR and IOC_PR_RELEASE ioctls for nvme devices,Michael Kelley,1,-3/+3
+2022-09-25,MAINTAINERS: Add Tom Talpey as cifs.ko reviewer,Steve French,1,-0/+1
+2022-09-23,Drivers: hv: vmbus: Use PCI_VENDOR_ID_MICROSOFT for better discoverability,Easwar Hariharan,1,-1/+1
+2022-09-23,drm/hyperv: Don't overwrite dirt_needed value set by host,Saurabh Sengar,1,-2/+0
+2022-09-23,Drivers: hv: vmbus: Optimize vmbus_on_event,Saurabh Sengar,2,-19/+23
+2022-09-22,md: Replace snprintf with scnprintf,Saurabh Sengar,1,-1/+1
+2022-09-19,net: mana: Add rmb after checking owner bits,Haiyang Zhang,1,-0/+10
+2022-09-14,cifs: update internal module number,Steve French,1,-2/+2
+2022-08-30,smb3: use filemap_write_and_wait_range instead of filemap_write_and_wait,Steve French,2,-4/+13
+2022-08-28,smb3: fix temporary data corruption in collapse range,Steve French,1,-10/+16
+2022-08-15,cifs: missing directory in MAINTAINERS file,Steve French,1,-0/+1
+2022-08-11,scsi: storvsc: Remove WQ_MEM_RECLAIM from storvsc_error_wq,Saurabh Sengar,1,-1/+1
+2022-08-11,SMB3: fix lease break timeout when multiple deferred close handles for the sa...,Bharath SM,1,-19/+1
+2022-08-11,smb3: allow deferred close timeout to be configurable,Steve French,5,-2/+22
+2022-08-10,perf inject jit: Ignore memfd and anonymous mmap events if jitdump present,Brian Robbins,1,-2/+7
+2022-08-05,cifs: update internal module number,Steve French,1,-2/+2
+2022-08-05,cifs: alloc_mid function should be marked as static,Steve French,2,-4/+1
+2022-08-05,cifs: when insecure legacy is disabled shrink amount of SMB1 code,Steve French,13,-463/+582
+2022-08-04,iommu/hyper-v: Use helper instead of directly accessing affinity,Michael Kelley,1,-3/+1
+2022-08-02,nvme: handle the persistent internal error AER,Michael Kelley,2,-2/+33
+2022-08-01,cifs: trivial style fixup,Steve French,1,-0/+1
+2022-08-01,cifs: avoid use of global locks for high contention data,Shyam Prasad N,13,-243/+336
+2022-08-01,cifs: remove remaining build warnings,Steve French,2,-11/+30
+2022-08-01,cifs: update MAINTAINERS file with reviewers,Steve French,1,-2/+5
+2022-08-01,cifs: remove minor build warning,Steve French,2,-2/+4
+2022-08-01,cifs: remove some camelCase and also some static build warnings,Steve French,7,-27/+34
+2022-08-01,smb3: check xattr value length earlier,Steve French,1,-2/+3
+2022-07-28,swiotlb: fix passing local variable to debugfs_create_ulong(),Tianyu Lan,1,-3/+9
+2022-07-22,swiotlb: clean up some coding style and minor issues,Tianyu Lan,2,-12/+17
+2022-07-16,net/9p: Initialize the iounit field during fid creation,Tyler Hicks,1,-4/+1
+2022-07-13,smb3: workaround negprot bug in some Samba servers,Steve French,1,-6/+7
+2022-07-13,Documentation: hyperv: Add overview of clocks and timers,Michael Kelley,2,-0/+74
+2022-07-13,Documentation: hyperv: Add overview of VMbus,Michael Kelley,2,-0/+304
+2022-07-13,Documentation: hyperv: Add overview of Hyper-V enlightenments,Michael Kelley,4,-0/+219
+2022-07-13,swiotlb: split up the global swiotlb lock,Tianyu Lan,3,-41/+197
+2022-07-12,cifs: remove unnecessary locking of chan_lock while freeing session,Shyam Prasad N,1,-2/+0
+2022-07-12,cifs: fix race condition with delayed threads,Shyam Prasad N,1,-2/+9
+2022-07-11,drm/hyperv : Removing the restruction of VRAM allocation with PCI bar size,Saurabh Sengar,1,-71/+3
+2022-07-11,Drivers: hv: vm_bus: Handle vmbus rescind calls after vmbus is suspended,Shradha Gupta,3,-8/+37
+2022-07-02,9p: Fix minor typo in code comment,Tyler Hicks,1,-1/+1
+2022-07-02,9p: Remove unnecessary variable for old fids while walking from d_parent,Tyler Hicks,1,-3/+3
+2022-07-02,9p: Make the path walk logic more clear about when cloning is required,Tyler Hicks,1,-4/+3
+2022-07-02,9p: Track the root fid with its own variable during lookups,Tyler Hicks,1,-12/+14
+2022-07-01,arm64: Do not forget syscall when starting a new thread.,Francis Laniel,1,-1/+2
+2022-06-27,arm64: Copy the task argument to unwind_state,Madhavan T. Venkataraman,1,-13/+20
+2022-06-27,arm64: Split unwind_init(),Madhavan T. Venkataraman,1,-11/+55
+2022-06-24,cifs: avoid deadlocks while updating iface,Shyam Prasad N,2,-15/+33
+2022-06-23,dma-direct: use the correct size for dma_set_encrypted(),Dexuan Cui,1,-3/+2
+2022-06-22,cifs: periodically query network interfaces from server,Shyam Prasad N,4,-1/+35
+2022-06-22,"cifs: during reconnect, update interface if necessary",Shyam Prasad N,3,-0/+88
+2022-06-22,cifs: change iface_list from array to sorted linked list,Shyam Prasad N,6,-129/+201
+2022-06-22,smb3: use netname when available on secondary channels,Shyam Prasad N,1,-2/+9
+2022-06-20,smb3: fix empty netname context on secondary channels,Steve French,1,-6/+8
+2022-06-18,"cifs: when a channel is not found for server, log its connection id",Shyam Prasad N,1,-0/+3
+2022-06-16,scsi: storvsc: Correct reporting of Hyper-V I/O size limits,Saurabh Sengar,1,-5/+22
+2022-06-16,smb3: add trace point for SMB2_set_eof,Steve French,2,-0/+40
+2022-06-16,net: mana: Add support of XDP_REDIRECT action,Haiyang Zhang,4,-2/+93
+2022-06-16,net: mana: Add the Linux MANA PF driver,Dexuan Cui,6,-4/+267
+2022-06-15,x86/Hyper-V: Add SEV negotiate protocol support in Isolation VM,Tianyu Lan,3,-6/+88
+2022-06-15,9p: Fix refcounting during full path walks for fid lookups,Tyler Hicks,1,-13/+9
+2022-06-10,cifs: populate empty hostnames for extra channels,Shyam Prasad N,2,-1/+8
+2022-06-10,Drivers: hv: vmbus: Release cpu lock in error case,Saurabh Sengar,1,-0/+1
+2022-06-08,HID: hyperv: Correctly access fields declared as __le16,Michael Kelley,1,-2/+3
+2022-06-08,Drivers: hv: vmbus: Don't assign VMbus channel interrupts to isolated CPUs,Saurabh Sengar,2,-5/+16
+2022-06-06,cifs: return errors during session setup during reconnects,Shyam Prasad N,1,-0/+3
+2022-06-04,cifs: fix uninitialized pointer in error case in dfs_cache_get_tgt_share,Steve French,1,-1/+2
+2022-06-01,cifs: update internal module number,Steve French,1,-2/+3
+2022-06-01,cifs: version operations for smb20 unneeded when legacy support disabled,Steve French,2,-2/+9
+2022-06-01,cifs: do not build smb1ops if legacy support is disabled,Steve French,1,-1/+3
+2022-05-30,drm/hyperv : Removing the restruction of VRAM allocation with PCI bar size,Saurabh Sengar,1,-71/+3
+2022-05-27,smb3: remove unneeded null check in cifs_readdir,Steve French,2,-4/+3
+2022-05-26,hv_balloon: Fix balloon_probe() and balloon_remove() error handling,Shradha Gupta,1,-5/+16
+2022-05-26,scsi: storvsc: Removing Pre Win8 related logic,Saurabh Sengar,1,-116/+39
+2022-05-24,cifs: avoid parallel session setups on same channel,Shyam Prasad N,5,-7/+65
+2022-05-24,cifs: use new enum for ses_status,Shyam Prasad N,8,-32/+39
+2022-05-24,cifs: do not use tcpStatus after negotiate completes,Shyam Prasad N,3,-14/+15
+2022-05-23,smb3: add mount parm nosparse,Steve French,5,-1/+11
+2022-05-23,smb3: don't set rc when used and unneeded in query_info_compound,Steve French,1,-1/+1
+2022-05-23,smb3: check for null tcon,Steve French,1,-2/+5
+2022-05-23,cifs: fix minor compile warning,Steve French,1,-0/+2
+2022-05-23,Add various fsctl structs,Steve French,2,-29/+101
+2022-05-23,Add defines for various newer FSCTLs,Steve French,1,-0/+6
+2022-05-23,certs: Explain the rationale to call panic(),Mickaël Salaün,1,-0/+9
+2022-05-23,certs: Allow root user to append signed hashes to the blacklist keyring,Mickaël Salaün,2,-21/+85
+2022-05-23,certs: Check that builtin blacklist hashes are valid,Mickaël Salaün,5,-3/+57
+2022-05-23,certs: Make blacklist_vet_description() more strict,Mickaël Salaün,1,-10/+36
+2022-05-23,certs: Factor out the blacklist hash creation,Mickaël Salaün,4,-46/+73
+2022-05-23,tools/certs: Add print-cert-tbs-hash.sh,Mickaël Salaün,2,-0/+92
+2022-05-22,smb3: add trace point for oplock not found,Steve French,2,-0/+5
+2022-05-21,smb3: add trace point for lease not found issue,Steve French,2,-0/+7
+2022-05-19,video: fbdev: hyperv_fb: Allow resolutions with size > 64 MB for Gen1,Saurabh Sengar,1,-18/+1
+2022-05-17,SMB3: EBADF/EIO errors in rename/open caused by race condition in smb2_compou...,Steve French,1,-2/+0
+2022-05-17,swiotlb: max mapping size takes min align mask into account,Tianyu Lan,1,-1/+12
+2022-05-13,PCI: hv: Fix synchronization between channel callback and hv_pci_bus_exit(),Andrea Parri (Microsoft),1,-7/+19
+2022-05-13,PCI: hv: Add validation for untrusted Hyper-V values,Andrea Parri (Microsoft),1,-9/+24
+2022-05-11,drm/hyperv: Remove support for Hyper-V 2008 and 2008R2/Win7,Michael Kelley,1,-16/+7
+2022-05-11,video: hyperv_fb: Remove support for Hyper-V 2008 and 2008R2/Win7,Michael Kelley,1,-20/+3
+2022-05-11,scsi: storvsc: Remove support for Hyper-V 2008 and 2008R2/Win7,Michael Kelley,1,-27/+9
+2022-05-11,Drivers: hv: vmbus: Remove support for Hyper-V 2008 and Hyper-V 2008R2/Win7,Michael Kelley,4,-72/+33
+2022-05-11,x86/hyperv: Disable hardlockup detector by default in Hyper-V guests,Michael Kelley,1,-0/+2
+2022-05-04,arm64: dts: qcom: sm8350-duo2: enable battery charger,Katherine Perez,1,-0/+12
+2022-05-03,drm/hyperv: Add error message for fb size greater than allocated,Saurabh Sengar,1,-1/+4
+2022-05-03,PCI: hv: Do not set PCI_COMMAND_MEMORY to reduce VM boot time,Dexuan Cui,1,-6/+11
+2022-04-28,Drivers: hv: vmbus: Refactor the ring-buffer iterator functions,Andrea Parri (Microsoft),2,-54/+13
+2022-04-28,Drivers: hv: vmbus: Accept hv_sock offers in isolated guests,Andrea Parri (Microsoft),2,-4/+12
+2022-04-28,hv_sock: Add validation for untrusted Hyper-V values,Andrea Parri (Microsoft),2,-2/+13
+2022-04-28,hv_sock: Copy packets sent by Hyper-V out of the ring buffer,Andrea Parri (Microsoft),1,-2/+7
+2022-04-28,hv_sock: Check hv_pkt_iter_first_raw()'s return value,Andrea Parri (Microsoft),1,-0/+2
+2022-04-25,PCI: hv: Fix synchronization between channel callback and hv_compose_msi_msg(),Andrea Parri (Microsoft),1,-6/+27
+2022-04-25,"Drivers: hv: vmbus: Introduce {lock,unlock}_requestor()",Andrea Parri (Microsoft),2,-6/+20
+2022-04-25,Drivers: hv: vmbus: Introduce vmbus_request_addr_match(),Andrea Parri (Microsoft),2,-18/+52
+2022-04-25,Drivers: hv: vmbus: Introduce vmbus_sendpacket_getid(),Andrea Parri (Microsoft),4,-10/+51
+2022-04-25,PCI: hv: Use vmbus_requestor to generate transaction IDs for VMbus hardening,Andrea Parri (Microsoft),1,-10/+29
+2022-04-25,Drivers: hv: vmbus: Fix handling of messages with transaction ID of zero,Andrea Parri (Microsoft),1,-2/+4
+2022-04-25,Drivers: hv: vmbus: Add VMbus IMC device to unsupported list,Michael Kelley,2,-3/+10
+2022-04-22,arm64: stacktrace: align with common naming,Madhavan T. Venkataraman,1,-2/+2
+2022-04-22,arm64: stacktrace: rename stackframe to unwind_state,Madhavan T. Venkataraman,1,-34/+34
+2022-04-22,arm64: stacktrace: rename unwinder functions,Madhavan T. Venkataraman,1,-17/+17
+2022-04-22,arm64: stacktrace: remove NULL task check from unwind_frame(),Madhavan T. Venkataraman,1,-3/+0
+2022-04-19,EDAC/dmc520: Don't print an error for each unconfigured interrupt line,Tyler Hicks,1,-1/+1
+2022-04-18,csky: Add C based string functions,Matteo Croce,8,-356/+150
+2022-04-11,hv_netvsc: Add support for XDP_REDIRECT,Haiyang Zhang,4,-94/+228
+2022-04-08,cifs: release cached dentries only if mount is complete,Shyam Prasad N,1,-13/+15
+2022-04-07,"hv_netvsc: Print value of invalid ID in netvsc_send_{completion,tx_complete}()",Andrea Parri (Microsoft),1,-4/+4
+2022-04-06,Drivers: hv: vmbus: Replace smp_store_mb() with virt_store_mb(),Andrea Parri (Microsoft),1,-3/+3
+2022-04-04,cifs: update internal module number,Steve French,1,-1/+1
+2022-04-02,tracing/user_events: Remove eBPF interfaces,Beau Belgrave,3,-136/+4
+2022-04-02,tracing/user_events: Hold event_mutex during dyn_event_add,Beau Belgrave,1,-2/+6
+2022-03-31,"smb3: fix ksmbd bigendian bug in oplock break, and move its struct to smbfs_c...",Steve French,5,-191/+119
+2022-03-30,ksmbd: shorten experimental warning on loading the module,Steve French,1,-1/+1
+2022-03-29,Drivers: hv: vmbus: Prevent load re-ordering when reading ring buffer,Michael Kelley,1,-1/+10
+2022-03-29,PCI: hv: Propagate coherence from VMbus device to PCI device,Michael Kelley,1,-0/+9
+2022-03-29,Drivers: hv: vmbus: Propagate VMbus coherence to each VMbus device,Michael Kelley,3,-0/+43
+2022-03-29,Drivers: hv: vmbus: Fix initialization of device object in vmbus_device_regis...,Andrea Parri (Microsoft),1,-3/+4
+2022-03-29,Drivers: hv: vmbus: Deactivate sysctl_record_panic_msg by default in isolated...,Andrea Parri (Microsoft),1,-6/+12
+2022-03-28,smb3: cleanup and clarify status of tree connections,Steve French,7,-33/+40
+2022-03-26,smb3: move defines for query info and query fsinfo to smbfs_common,Steve French,5,-603/+335
+2022-03-26,smb3: move defines for ioctl protocol header and SMB2 sizes to smbfs_common,Steve French,7,-143/+88
+2022-03-25,[smb3] move more common protocol header definitions to smbfs_common,Steve French,5,-206/+112
+2022-03-25,virt: vmgenid: recognize new CID added by Hyper-V,Michael Kelley,1,-0/+1
+2022-03-18,cifs: use a different reconnect helper for non-cifsd threads,Shyam Prasad N,6,-7/+50
+2022-03-18,Adjust cifssb maximum read size,Rohith Surabattula,2,-0/+13
+2022-03-16,smb3: fix incorrect session setup check for multiuser mounts,Steve French,1,-1/+2
+2022-03-15,user_events: Add trace event call as root for low permission cases,Beau Belgrave,1,-2/+37
+2022-03-11,net: netvsc: remove break after return,Saurabh Sengar,1,-1/+0
+2022-03-11,user_events: Prevent dyn_event delete racing with ioctl add/delete,Beau Belgrave,1,-6/+40
+2022-03-10,user_events: Fix potential uninitialized pointer while parsing field,Beau Belgrave,1,-1/+3
+2022-03-08,x86/hyperv: Output host build info as normal Windows version number,Michael Kelley,1,-4/+4
+2022-03-08,arm64: Do not defer reserve_crashkernel() for platforms with no DMA memory zones,Vijay Balakrishna,2,-5/+63
+2022-03-06,"Revert ""xfrm: state and policy should fail if XFRMA_IF_ID 0""",Kai Lueke,1,-18/+3
+2022-02-25,x86/kvmclock: Fix Hyper-V Isolated VM's boot issue when vCPUs > 64,Dexuan Cui,1,-1/+1
+2022-02-18,hv_utils: Add comment about max VMbus packet size in VSS driver,Michael Kelley,2,-2/+16
+2022-02-16,cifs: fix confusing unneeded warning message on smb2.1 and earlier,Steve French,1,-5/+6
+2022-02-13,smb3: fix snapshot mount option,Steve French,1,-2/+2
+2022-02-10,user_events: Add documentation file,Beau Belgrave,2,-0/+217
+2022-02-10,user_events: Add sample code for typical usage,Beau Belgrave,2,-0/+96
+2022-02-10,user_events: Add self-test for validator boundaries,Beau Belgrave,1,-0/+65
+2022-02-10,user_events: Add self-test for perf_event integration,Beau Belgrave,2,-1/+169
+2022-02-10,user_events: Add self-test for dynamic_events integration,Beau Belgrave,2,-1/+131
+2022-02-10,user_events: Add self-test for ftrace integration,Beau Belgrave,3,-0/+397
+2022-02-10,user_events: Validate user payloads for size and null termination,Beau Belgrave,1,-14/+133
+2022-02-10,user_events: Optimize writing events by only copying data once,Beau Belgrave,1,-30/+85
+2022-02-10,user_events: Add basic perf and eBPF support,Beau Belgrave,1,-1/+71
+2022-02-10,user_events: Handle matching arguments from dyn_events,Beau Belgrave,1,-1/+76
+2022-02-10,user_events: Add print_fmt generation support for basic types,Beau Belgrave,1,-2/+113
+2022-02-10,user_events: Add minimal support for trace_event into ftrace,Beau Belgrave,4,-0/+1318
+2022-02-09,Netvsc: Call hv_unmap_memory() in the netvsc_device_remove(),Tianyu Lan,1,-8/+16
+2022-02-08,cifs: mark sessions for reconnection in helper function,Shyam Prasad N,1,-5/+14
+2022-02-08,cifs: call helper functions for marking channels for reconnect,Shyam Prasad N,4,-11/+6
+2022-02-08,cifs: call cifs_reconnect when a connection is marked,Shyam Prasad N,1,-0/+1
+2022-02-07,Drivers: hv: vmbus: Rework use of DMA_BIT_MASK(64),Michael Kelley,2,-2/+3
+2022-02-06,[smb3] improve error message when mount options conflict with posix,Steve French,1,-1/+10
+2022-02-05,net: mana: Remove unnecessary check of cqe_type in mana_process_rx_cqe(),Haiyang Zhang,1,-3/+0
+2022-02-05,net: mana: Add handling of CQE_RX_TRUNCATED,Haiyang Zhang,1,-2/+5
+2022-02-04,selftests/bpf: Test bpf_core_types_are_compat() functionality.,Matteo Croce,6,-2/+74
+2022-02-04,bpf: Implement bpf_core_types_are_compat().,Matteo Croce,2,-1/+109
+2022-02-03,printk: Fix incorrect __user type in proc_dointvec_minmax_sysadmin(),Mickaël Salaün,1,-1/+1
+2022-02-03,PCI: hv: Fix NUMA node assignment when kernel boots with custom NUMA topology,Long Li,1,-2/+11
+2022-02-03,Invalidate fscache cookie only when inode attributes are changed.,Rohith Surabattula,1,-4/+4
+2022-01-31,arm64: dts: qcom: sm8150: simplify references to pwrkey and resin,Felipe Balbi,1,-12/+8
+2022-01-31,arm64: dts: qcom: sm8150: add i2c and spi dma channels,Felipe Balbi,1,-0/+120
+2022-01-31,net: mana: Reuse XDP dropped page,Haiyang Zhang,2,-2/+14
+2022-01-31,net: mana: Add counter for XDP_TX,Haiyang Zhang,3,-5/+15
+2022-01-31,net: mana: Add counter for packet dropped by XDP,Haiyang Zhang,3,-29/+49
+2022-01-29,cifs: unlock chan_lock before calling cifs_put_tcp_session,Shyam Prasad N,1,-6/+2
+2022-01-24,video: hyperv_fb: Fix validation of screen resolution,Michael Kelley,1,-13/+3
+2022-01-19,cifs: update internal module number,Steve French,1,-2/+2
+2022-01-19,smb3: send NTLMSSP version information,Steve French,4,-2/+101
+2022-01-19,cifs: cifs_ses_mark_for_reconnect should also update reconnect bits,Shyam Prasad N,6,-29/+14
+2022-01-19,cifs: update tcpStatus during negotiate and sess setup,Shyam Prasad N,1,-3/+2
+2022-01-19,cifs: make status checks in version independent callers,Shyam Prasad N,3,-29/+23
+2022-01-19,cifs: remove repeated state change in dfs tree connect,Shyam Prasad N,1,-10/+0
+2022-01-19,cifs: fix the cifs_reconnect path for DFS,Shyam Prasad N,1,-0/+3
+2022-01-19,cifs: protect all accesses to chan_* with chan_lock,Shyam Prasad N,5,-5/+22
+2022-01-19,cifs: fix the connection state transitions with multichannel,Shyam Prasad N,4,-28/+28
+2022-01-19,cifs: check reconnects for channels of active tcons too,Shyam Prasad N,3,-19/+99
+2022-01-18,smb3: add new defines from protocol specification,Steve French,2,-1/+3
+2022-01-17,cifs: free ntlmsspblob allocated in negotiate,Shyam Prasad N,1,-5/+8
+2022-01-12,PCI: hv: Add arm64 Hyper-V vPCI support,Sunil Muthuswamy,4,-3/+245
+2022-01-12,PCI: hv: Make the code arch neutral by adding arch specific interfaces,Sunil Muthuswamy,4,-65/+87
+2022-01-10,scsi: storvsc: Fix storvsc_queuecommand() memory leak,Juan Vazquez,1,-5/+12
+2022-01-07,cifs: avoid race during socket reconnect between send and recv,Shyam Prasad N,3,-24/+6
+2022-01-07,cifs: maintain a state machine for tcp/smb/tcon sessions,Shyam Prasad N,5,-35/+82
+2022-01-07,cifs: take cifs_tcp_ses_lock for status checks,Shyam Prasad N,12,-43/+164
+2022-01-05,Drivers: hv: vmbus: Initialize request offers message for Isolation VM,Juan Vazquez,1,-1/+1
+2022-01-02,cifs: reconnect only the connection and not smb session where possible,Shyam Prasad N,5,-35/+52
+2022-01-02,cifs: add WARN_ON for when chan_count goes below minimum,Shyam Prasad N,1,-0/+5
+2022-01-02,cifs: adjust DebugData to use chans_need_reconnect for conn status,Shyam Prasad N,1,-1/+7
+2022-01-02,cifs: use the chans_need_reconnect bitmap for reconnect status,Shyam Prasad N,15,-207/+236
+2022-01-02,cifs: track individual channel status using chans_need_reconnect,Shyam Prasad N,6,-24/+211
+2021-12-28,x86/hyperv: Fix definition of hv_ghcb_pg variable,Michael Kelley,2,-2/+2
+2021-12-28,Drivers: hv: Fix definition of hypercall input & output arg variables,Michael Kelley,2,-4/+4
+2021-12-20,net: netvsc: Add Isolation VM support for netvsc driver,Tianyu Lan,8,-3/+187
+2021-12-20,scsi: storvsc: Add Isolation VM support for storvsc driver,Tianyu Lan,3,-16/+26
+2021-12-20,hyper-v: Enable swiotlb bounce buffer for Isolation VM,Tianyu Lan,2,-1/+26
+2021-12-20,x86/hyper-v: Add hyperv Isolation VM check in the cc_platform_has(),Tianyu Lan,1,-0/+8
+2021-12-20,swiotlb: Add swiotlb bounce buffer remap function for HV IVM,Tianyu Lan,2,-2/+47
+2021-12-17,cifs: ignore resource_id while getting fscache super cookie,Shyam Prasad N,2,-13/+7
+2021-12-16,net: mana: Add RX fencing,Dexuan Cui,2,-5/+66
+2021-12-16,arm64: kexec: Fix missing error code 'ret' warning in load_other_segments(),Lakshmi Ramasubramanian,1,-0/+1
+2021-12-14,arm64: dts: qcom: add minimal DTS for Microsoft Surface Duo 2,Katherine Perez,2,-0/+370
+2021-12-11,tracing: Do not let synth_events block other dyn_event systems during create,Beau Belgrave,1,-6/+7
+2021-12-10,arm64: Make dump_backtrace() use arch_stack_walk(),Madhavan T. Venkataraman,1,-38/+6
+2021-12-10,arm64: Make profile_pc() use arch_stack_walk(),Madhavan T. Venkataraman,1,-12/+13
+2021-12-10,arm64: Make return_address() use arch_stack_walk(),Madhavan T. Venkataraman,1,-6/+2
+2021-12-10,arm64: Make __get_wchan() use arch_stack_walk(),Madhavan T. Venkataraman,1,-17/+25
+2021-12-10,arm64: Make perf_callchain_kernel() use arch_stack_walk(),Madhavan T. Venkataraman,1,-12/+3
+2021-12-07,platform: surface: Propagate ACPI Dependency,Jarrett Schultz,2,-1/+7
+2021-12-03,cifs: avoid use of dstaddr as key for fscache client cookie,Shyam Prasad N,1,-37/+1
+2021-12-03,cifs: add server conn_id to fscache client cookie,Shyam Prasad N,2,-0/+14
+2021-12-03,cifs: wait for tcon resource_id before getting fscache super,Shyam Prasad N,3,-7/+8
+2021-11-23,cifs: update internal version number,Steve French,1,-1/+1
+2021-11-23,smb2: clarify rc initialization in smb2_reconnect,Steve French,1,-1/+1
+2021-11-23,cifs: populate server_hostname for extra channels,Shyam Prasad N,1,-0/+1
+2021-11-23,cifs: nosharesock should be set on new server,Shyam Prasad N,1,-3/+4
+2021-11-22,net: mana: Add XDP support,Haiyang Zhang,4,-11/+235
+2021-11-22,firmware: smccc: Fix check for ARCH_SOC_ID not implemented,Michael Kelley,1,-1/+1
+2021-11-16,cifs: protect srv_count with cifs_tcp_ses_lock,Steve French,1,-0/+2
+2021-11-16,cifs: move debug print out of spinlock,Steve French,1,-1/+1
+2021-11-12,cifs: do not duplicate fscache cookie for secondary channels,Shyam Prasad N,1,-2/+7
+2021-11-12,cifs: connect individual channel servers to primary channel server,Shyam Prasad N,6,-14/+36
+2021-11-12,cifs: protect session channel fields with chan_lock,Shyam Prasad N,6,-15/+71
+2021-11-12,cifs: do not negotiate session if session already exists,Shyam Prasad N,1,-8/+10
+2021-11-12,smb3: do not setup the fscache_super_cookie until fsinfo initialized,Steve French,2,-2/+14
+2021-11-12,smb3: add additional null check in SMB311_posix_mkdir,Steve French,1,-0/+11
+2021-11-12,cifs: release lock earlier in dequeue_mid error case,Steve French,1,-3/+4
+2021-11-12,smb3: add additional null check in SMB2_tcon,Steve French,1,-1/+1
+2021-11-12,smb3: add additional null check in SMB2_open,Steve French,1,-1/+3
+2021-11-11,smb3: add additional null check in SMB2_ioctl,Steve French,1,-0/+10
+2021-11-10,smb3: remove trivial dfs compile warning,Steve French,1,-2/+2
+2021-11-10,smb3: do not error on fsync when readonly,Steve French,1,-6/+29
+2021-11-10,"cifs: for compound requests, use open handle if possible",Shyam Prasad N,1,-5/+17
+2021-11-08,cifs: send workstation name during ntlmssp session setup,Shyam Prasad N,8,-85/+170
+2021-11-07,cifs: nosharesock should not share socket with future sessions,Shyam Prasad N,3,-1/+10
+2021-11-05,smb3: add dynamic trace points for socket connection,Steve French,2,-1/+73
+2021-11-02,cifs: add mount parameter tcpnodelay,Steve French,2,-0/+9
+2021-11-02,"cifs: To match file servers, make sure the server hostname matches",Shyam Prasad N,3,-8/+20
+2021-11-01,net: mana: Support hibernation and kexec,Dexuan Cui,3,-52/+164
+2021-11-01,net: mana: Improve the HWC error handling,Dexuan Cui,2,-44/+31
+2021-11-01,net: mana: Report OS info to the PF driver,Dexuan Cui,1,-0/+11
+2021-11-01,net: mana: Fix the netdev_err()'s vPort argument in mana_init_port(),Dexuan Cui,1,-1/+2
+2021-10-28,Drivers: hv: vmbus: Remove unused code to check for subchannels,Michael Kelley,2,-47/+0
+2021-10-28,Drivers: hv: vmbus: Initialize VMbus ring buffer for Isolation VM,Tianyu Lan,3,-22/+53
+2021-10-28,Drivers: hv: vmbus: Add SNP support for VMbus channel initiate message,Tianyu Lan,2,-6/+91
+2021-10-28,x86/hyperv: Add ghcb hvcall support for SNP VM,Tianyu Lan,5,-2/+94
+2021-10-28,x86/hyperv: Add Write/Read MSR registers via ghcb page,Tianyu Lan,6,-59/+232
+2021-10-28,Drivers: hv: vmbus: Mark vmbus ring buffer visible to host in Isolation VM,Tianyu Lan,5,-38/+65
+2021-10-28,x86/hyperv: Add new hvcall guest address host visibility support,Tianyu Lan,7,-7/+154
+2021-10-28,x86/hyperv: Initialize shared memory boundary in the Isolation VM.,Tianyu Lan,2,-1/+13
+2021-10-28,x86/hyperv: Initialize GHCB page in Isolation VM,Tianyu Lan,4,-7/+74
+2021-10-26,net: mana: Allow setting the number of queues while the NIC is down,Haiyang Zhang,2,-13/+9
+2021-10-25,x86/sev: Expose sev_es_ghcb_hv_call() for use by HyperV,Tianyu Lan,3,-15/+29
+2021-10-15,drm/hyperv: Fix double mouse pointers,Dexuan Cui,3,-1/+55
+2021-10-12,scsi: storvsc: Fix validation for unsolicited incoming packets,Andrea Parri (Microsoft),1,-9/+23
+2021-10-12,scsi: core: Fix shost->cmd_per_lun calculation in scsi_add_host_with_dma(),Dexuan Cui,1,-1/+2
+2021-10-08,net: mana: Fix error handling in mana_create_rxq(),Haiyang Zhang,1,-1/+3
+2021-09-24,PCI: hv: Fix sleep while in non-sleep context when removing child devices fro...,Long Li,1,-3/+10
+2021-09-23,cifs: fix incorrect check for null pointer in header_assemble,Steve French,1,-2/+3
+2021-09-23,smb3: correct server pointer dereferencing check to be more consistent,Steve French,1,-1/+2
+2021-09-23,smb3: correct smb3 ACL security descriptor,Steve French,1,-2/+2
+2021-09-23,cifs: Clear modified attribute bit from inode flags,Steve French,1,-1/+1
+2021-09-21,ksmbd: log that server is experimental at module load,Steve French,1,-0/+3
+2021-09-17,cifs: Not to defer close on file when lock is set,Rohith Surabattula,2,-0/+3
+2021-09-17,cifs: Fix soft lockup during fsstress,Rohith Surabattula,1,-2/+2
+2021-09-17,cifs: Deferred close performance improvements,Rohith Surabattula,3,-3/+43
+2021-09-15,bpf: Update bpf_get_smp_processor_id() documentation,Matteo Croce,2,-2/+2
+2021-09-15,HID: core: add TransducerSerialNumber2,Felipe Balbi,2,-0/+2
+2021-09-13,cifs: fix incorrect kernel doc comments,Steve French,2,-3/+11
+2021-09-13,cifs: remove pathname for file from SPDX header,Steve French,48,-49/+8
+2021-09-09,cifs: move SMB FSCTL definitions to common code,Steve French,2,-1/+1
+2021-09-08,cifs: rename cifs_common to smbfs_common,Steve French,9,-10/+10
+2021-09-08,cifs: update FSCTL definitions,Steve French,1,-3/+13
+2021-08-25,cifs: add cifs_common directory to MAINTAINERS file,Steve French,1,-0/+1
+2021-08-25,cifs: cifs_md4 convert to SPDX identifier,Steve French,2,-6/+1
+2021-08-25,cifs: enable fscache usage even for files opened as rw,Shyam Prasad N,6,-11/+76
+2021-08-25,oid_registry: Add OIDs for missing Spnego auth mechanisms to Macs,Steve French,1,-0/+7
+2021-08-25,smb3: fix posix extensions mount option,Steve French,1,-2/+9
+2021-08-25,net: mana: Add WARN_ON_ONCE in case of CQE read overflow,Haiyang Zhang,1,-1/+1
+2021-08-25,net: mana: Add support for EQ sharing,Haiyang Zhang,4,-56/+78
+2021-08-25,net: mana: Move NAPI from EQ to CQ,Haiyang Zhang,5,-103/+74
+2021-08-20,dm ima: update dm documentation for ima measurement support,Tushar Sugandhi,1,-209/+618
+2021-08-20,dm ima: update dm target attributes for ima measurements,Tushar Sugandhi,3,-9/+20
+2021-08-20,dm ima: add a warning in dm_init if duplicate ima events are not measured,Tushar Sugandhi,1,-3/+6
+2021-08-20,dm ima: prefix ima event name related to device mapper with dm_,Tushar Sugandhi,1,-9/+10
+2021-08-20,dm ima: add version info to dm related events in ima log,Tushar Sugandhi,2,-12/+57
+2021-08-20,dm ima: prefix dm table hashes in ima log with hash algorithm,Tushar Sugandhi,2,-3/+12
+2021-08-13,PCI: hv: Support for create interrupt v3,Sunil Muthuswamy,1,-5/+62
+2021-08-12,cifs: Call close synchronously during unlink/rename/lease break.,Rohith Surabattula,3,-30/+56
+2021-08-12,cifs: Handle race conditions during rename,Rohith Surabattula,2,-7/+28
+2021-08-10,i2c: iproc: fix race between client unreg and tasklet,Dhananjay Phadke,1,-2/+2
+2021-08-10,dm: add documentation for IMA measurement support,Tushar Sugandhi,2,-0/+307
+2021-08-10,dm: update target status functions to support IMA measurement,Tushar Sugandhi,32,-2/+328
+2021-08-10,dm ima: measure data on device rename,Tushar Sugandhi,3,-0/+53
+2021-08-10,dm ima: measure data on table clear,Tushar Sugandhi,3,-0/+97
+2021-08-10,dm ima: measure data on device remove,Tushar Sugandhi,3,-0/+124
+2021-08-10,dm ima: measure data on device resume,Tushar Sugandhi,3,-2/+125
+2021-08-10,dm ima: measure data on table load,Tushar Sugandhi,9,-2/+415
+2021-08-09,scsi: storvsc: Log TEST_UNIT_READY errors as warnings,Michael Kelley,1,-2/+12
+2021-08-06,selftests/bpf: Fix bpf-iter-tcp4 test to print correctly the dest IP,Jose Blanquicet,1,-1/+1
+2021-08-05,cifs: create sd context must be a multiple of 8,Shyam Prasad N,1,-1/+1
+2021-08-05,arm64: dts: qcom: sm8150: add SPI nodes,Felipe Balbi,1,-0/+439
+2021-08-04,Drivers: hv: Enable Hyper-V code to be built on ARM64,Michael Kelley,1,-3/+4
+2021-08-04,arm64: efi: Export screen_info,Michael Kelley,1,-0/+1
+2021-08-04,arm64: hyperv: Initialize hypervisor on boot,Michael Kelley,2,-1/+88
+2021-08-04,arm64: hyperv: Add panic handler,Michael Kelley,1,-0/+52
+2021-08-04,arm64: hyperv: Add Hyper-V hypercall and register access utilities,Michael Kelley,6,-0/+258
+2021-08-04,x86/hyperv: fix root partition faults when writing to VP assist page MSR,Praveen Kumar,2,-20/+53
+2021-08-02,loop: raise media_change event,Matteo Croce,1,-0/+5
